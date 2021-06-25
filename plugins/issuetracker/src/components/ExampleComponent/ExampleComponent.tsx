@@ -1,7 +1,6 @@
 import React from 'react';
-import { Typography, Grid } from '@material-ui/core';
+import { Grid } from '@material-ui/core';
 import {
-  InfoCard,
   Header,
   Page,
   Content,
@@ -24,12 +23,7 @@ export const ExampleComponent = () => (
       </ContentHeader>
       <Grid container spacing={3} direction="column">
         <Grid item>
-        <ExampleIssuesComponent />
-          <InfoCard title="Project X Issues">
-            <Typography variant="body1">
-              Result
-            </Typography>
-          </InfoCard>
+          <ExampleIssuesComponent />
         </Grid>
         <Grid item>
           <ExampleFetchComponent />
