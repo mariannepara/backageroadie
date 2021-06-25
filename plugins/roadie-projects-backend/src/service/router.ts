@@ -45,16 +45,18 @@ export async function createRouter(
         res.status(200).send(await projectStore.getProjects());
       })
       .get('/projects/:projectId', async (_req, res) => {
-        res.status(501).send('not implemented');
+        res.status(200).send(await projectStore.getProject(1));
       })
       .get('/projects/:projectId/issues', async (_req, res) => {
-        res.status(501).send('not implemented');
+        res.status(200).send(await projectStore.getIssuesForProject(1));
       })
       .get('/issues/', async (_req, res) => {
-        res.status(501).send('not implemented');
+        res.status(200).send('Not implemented yet')
+        // TODO
+        // res.status(200).send(await projectStore.getProjects());
       })
       .get('/issues/:issueId', async (_req, res) => {
-        res.status(501).send('not implemented');
+        res.status(200).send(await projectStore.getIssue(1));
       });
 
     return router;
