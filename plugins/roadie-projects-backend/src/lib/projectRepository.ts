@@ -9,22 +9,19 @@ export interface ProjectRepository {
 
 export class RoadieProjectRepository implements ProjectRepository {
   async getProject(id: number): Promise<Project> {
-    console.log(id);
     const data = await import('./projects.json');
-    return data.projects[0];
+    return data.projects[id];
   }
 
   async getIssuesForProject(projectId: number): Promise<Issue[]> {
-    console.log(projectId);
     const data = await import('./projects.json');
-    const issues: Issue[] = data.projects[0].issues;
+    const issues: Issue[] = data.projects[projectId].issues;
     return issues;
   }
 
   async getIssue(issueId: number): Promise<Issue> {
-    console.log(issueId);
     const data = await import('./projects.json');
-    const issue: Issue = data.projects[0].issues[0];
+    const issue: Issue = data.projects[0].issues[issueId];
     return issue;
   }
 

@@ -39,7 +39,7 @@
         {
           "id": 4,
           "type": "bug",
-          "title": "Issue 1",
+          "title": "Oh no",
           "description": "First bug in first project",
           "status": "inprogress",
           "assigned_to": "guest",
@@ -49,7 +49,7 @@
         {
           "id": 5,
           "type": "task",
-          "title": "Task 1",
+          "title": "What?",
           "description": "First task in first project",
           "status": "resolved",
           "assigned_to": "guest",
@@ -59,7 +59,7 @@
         {
           "id": 6,
           "type": "story",
-          "title": "Story 1",
+          "title": "Add not work",
           "description": "First story in first project",
           "status": "open",
           "assigned_to": "guest",
@@ -107,7 +107,7 @@
         {
           "id": 9,
           "type": "bug",
-          "title": "Issue 2",
+          "title": "Issue 222",
           "description": "First bug in second project",
           "status": "inprogress",
           "assigned_to": "guest",
@@ -117,7 +117,7 @@
         {
           "id": 10,
           "type": "task",
-          "title": "Task 2",
+          "title": "Another task 2",
           "description": "First task in second project",
           "status": "resolved",
           "assigned_to": "guest",
@@ -127,7 +127,7 @@
         {
           "id": 11,
           "type": "story",
-          "title": "Story 2",
+          "title": "Long time ago",
           "description": "First story in second project",
           "status": "open",
           "assigned_to": "guest",

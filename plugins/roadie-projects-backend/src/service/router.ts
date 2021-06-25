@@ -45,7 +45,7 @@ export async function createRouter(
         res.status(200).send(await projectStore.getProjects());
       })
       .get('/projects/:projectId', async (_req, res) => {
-        res.status(200).send(await projectStore.getProject(1));
+        res.status(200).send(await projectStore.getProject(parseInt(_req.params.projectId, 16)));
       })
       .get('/projects/:projectId/issues', async (_req, res) => {
         res.status(200).send(await projectStore.getIssuesForProject(1));
