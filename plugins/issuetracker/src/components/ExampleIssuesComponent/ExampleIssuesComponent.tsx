@@ -1,5 +1,5 @@
 import React from 'react';
-import { Table, TableColumn, Progress } from '@backstage/core';
+import { Table, TableColumn, Progress, TableFilter } from '@backstage/core';
 import Alert from '@material-ui/lab/Alert';
 import { useAsync } from 'react-use';
 import { Issue, Project } from '../../types/types';
@@ -13,30 +13,39 @@ export const DenseTable = ({ issues, projectName }: DenseTableProps) => {
 
   const columns: TableColumn[] = [
     { title: 'Type', field: 'type' },
-    { title: 'title', field: 'title' },
+    { title: 'Title', field: 'title' },
+    { title: 'Description', field: 'description' },
+    { title: 'Status', field: 'status' },
+    { title: 'Assigned to', field: 'assigned_to' },
   ];
 
-  // id: number;
-  // type: string;
-  // title: string;
-  // description: string;
-  // status: string;
-  // assigned_to: string;
-  // created_by: string;
-  // created_at: string;
+  const filters: TableFilter[] = [
+    {
+      column: 'Type',
+      type: 'multiple-select',
+    },
+    {
+      column: 'Status',
+      type: 'checkbox-tree',
+    },
+  ];
 
   const data = issues.map(issue => {
     return {
       type: issue.type,
       title: issue.title,
+      description: issue.description,
+      status: issue.status,
+      assigned_to: issue.assigned_to,
     };
   });
 
   return (
     <Table
       title={projectName}
-      options={{ search: false, paging: false }}
+      options={{ search: false, paging: false, padding: 'dense' }}
       columns={columns}
+      filters={filters}
       data={data}
     />
   );
@@ -44,8 +53,7 @@ export const DenseTable = ({ issues, projectName }: DenseTableProps) => {
 
 export const ExampleIssuesComponent = () => {
   const { value, loading, error } = useAsync(async (): Promise<Project> => {
-    const response = await fetch('http://localhost:7000/api/ticketing/projects/1'); 
-
+    const response = await fetch('http://localhost:7000/api/ticketing/projects/1');
     return await response.json();
   }, []);
 
