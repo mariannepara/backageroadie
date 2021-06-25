@@ -10,6 +10,7 @@ import {
   SupportButton,
 } from '@backstage/core';
 import { ExampleFetchComponent } from '../ExampleFetchComponent';
+import { ExampleIssuesComponent } from '../ExampleIssuesComponent';
 
 export const ExampleComponent = () => (
   <Page themeId="tool">
@@ -23,9 +24,10 @@ export const ExampleComponent = () => (
       </ContentHeader>
       <Grid container spacing={3} direction="column">
         <Grid item>
-          <InfoCard title="Information card">
+        <ExampleIssuesComponent />
+          <InfoCard title="Project X Issues">
             <Typography variant="body1">
-              All content should be wrapped in a card like this.
+              Result
             </Typography>
           </InfoCard>
         </Grid>
@@ -36,3 +38,5 @@ export const ExampleComponent = () => (
     </Content>
   </Page>
 );
+
+

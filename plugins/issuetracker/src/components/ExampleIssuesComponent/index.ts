@@ -1,0 +1,1 @@
+export { ExampleIssuesComponent } from './ExampleIssuesComponent';
