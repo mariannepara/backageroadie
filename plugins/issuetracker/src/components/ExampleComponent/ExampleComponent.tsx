@@ -10,6 +10,7 @@ import {
 } from '@backstage/core';
 import { ExampleFetchComponent } from '../ExampleFetchComponent';
 import { ExampleIssuesComponent } from '../ExampleIssuesComponent';
+import { ExampleIssuesSummeryComponent } from '../ExampleIssuesSummeryComponent';
 
 export const ExampleComponent = () => (
   <Page themeId="tool">
@@ -19,9 +20,12 @@ export const ExampleComponent = () => (
     </Header>
     <Content>
       <ContentHeader title="Plugin title">
-        <SupportButton>A description of your plugin goes here.</SupportButton>
+        <SupportButton>Manage all issues in one place.</SupportButton>
       </ContentHeader>
       <Grid container spacing={3} direction="column">
+        <Grid item>
+          <ExampleIssuesSummeryComponent />
+        </Grid>
         <Grid item>
           <ExampleIssuesComponent />
         </Grid>

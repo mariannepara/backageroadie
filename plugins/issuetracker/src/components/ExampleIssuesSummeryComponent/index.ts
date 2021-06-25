@@ -1,0 +1,1 @@
+export { ExampleIssuesSummeryComponent } from './ExampleIssuesSummeryComponent';
