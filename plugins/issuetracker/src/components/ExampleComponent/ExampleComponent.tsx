@@ -19,7 +19,7 @@ export const ExampleComponent = () => (
       <HeaderLabel label="Lifecycle" value="Alpha" />
     </Header>
     <Content>
-      <ContentHeader title="Plugin title">
+      <ContentHeader title="Issue Tracker Dashboard">
         <SupportButton>Manage all issues in one place.</SupportButton>
       </ContentHeader>
       <Grid container spacing={3} direction="column">

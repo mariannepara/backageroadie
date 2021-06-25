@@ -15,3 +15,9 @@ export type Issue = {
   created_by: string;
   created_at: string;
 };
+
+export type IssueSummery = {
+  key: string;
+  type: string;
+  count: string;
+};
